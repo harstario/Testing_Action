@@ -25,8 +25,8 @@ def delivery_report(err, msg):
 
 order = {
     "order_id": str(uuid.uuid4()),
-    "user": "ravi",
-    "item": "sprite",
+    "user": "sunda",
+    "item": "water",
     "quantity": 1,
 
 }
@@ -42,3 +42,4 @@ producer.produce(
 
 
 producer.flush()
+
