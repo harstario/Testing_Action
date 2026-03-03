@@ -56,7 +56,7 @@ jobs:
       # 6. Deploy to Cluster
       - name: Deploy to Cluster
         run: |
-          kubectl apply -f k8s/kafka-service.yaml
+          kubectl apply -f k8s/kafka-deployment.yaml
           kubectl apply -f k8s/producer-deployment.yaml
           kubectl apply -f k8s/consumer-deployment.yaml
 
