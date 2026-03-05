@@ -2,8 +2,6 @@ import uuid
 import json
 from confluent_kafka import Producer
 
-
-
 producer_config = {
     "bootstrap.servers": "localhost:9092",
     "enable.idempotence":True,  # Ensures Exactly-Once at producer level
@@ -25,9 +23,9 @@ def delivery_report(err, msg):
 
 order = {
     "order_id": str(uuid.uuid4()),
-    "user": "ravi",
-    "item": "sprite",
-    "quantity": 1,
+    "user": "tango",
+    "item": "water",
+    "quantity": 3,
 
 }
 
