@@ -14,11 +14,11 @@ consumer = Consumer(consumer_config)
 dlq_producer = Producer({"bootstrap.servers": "localhost:9092"})
 consumer.subscribe(["orders"])
 MAX_RETRIES = 3
-print("Consumer running with Redis deduplication")
+print("Consumer")
 
 
 def process_order(order):
-    print(f"Processed {order['quantity']} x {order['item']} for {order['user']}")
+    print(f"Tracker ...{order['order_id'][-5:]} : Processed {order['quantity']} x {order['item']} for {order['user']}")
 
 
 while True:

@@ -1,2 +1,2 @@
 confluent-kafka==2.3.0
-redis
+redis==5.0.1
